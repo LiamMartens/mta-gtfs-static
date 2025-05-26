@@ -1,0 +1,22 @@
+{
+  "name": "mta-gtfs-static",
+  "version": "0.0.0-202505261229",
+  "description": "This package contains JSON exports of the static GTFS data. It is updated once per day.",
+  "type": "module",
+  "exports": {
+    "./gtfs/*/*": "./gtfs_json/*/*.json"
+  },
+  "devDependencies": {
+    "csv2json": "^2.0.2"
+  },
+  "scripts": {
+    "data:update": "./scripts/update.sh",
+    "data:generate": "./scripts/generate.sh"
+  },
+  "keywords": [
+    "mta",
+    "gtfs"
+  ],
+  "author": "Liam Martens <hi@liammartens.com>",
+  "license": "MIT"
+}
