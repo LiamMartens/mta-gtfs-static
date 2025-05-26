@@ -1,5 +1,9 @@
 name: Update and publish data
 
+permissions:
+  contents: write
+  id-token: write
+
 on:
   schedule:
     - cron: "0 0 * * *" # Runs daily at midnight
