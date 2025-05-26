@@ -15,10 +15,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
       - name: Use Node 20.x
         uses: actions/setup-node@v4
         with:
           node-version: "20.x"
+          registry-url: "https://registry.npmjs.org"
       - name: Install dependencies
         run: npm ci
       - name: Update data
@@ -26,8 +30,11 @@ jobs:
       - id: update-version
         run: |
           VERSION=0.0.0-$(date +%Y%m%d%H%M)
-          echo "version=0.0.0-$VERSION" >> $GITHUB_OUTPUT;
+          echo "version=$VERSION" >> $GITHUB_OUTPUT;
           jq --arg version $VERSION '.version = $version' package.json > temp.json && mv temp.json package.json
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -41,3 +48,13 @@ jobs:
             This release includes the latest static GTFS data.
           draft: false
           prerelease: false
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -a -m "Version bump" || echo "No changes to commit"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
