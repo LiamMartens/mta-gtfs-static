@@ -3,7 +3,13 @@
   "version": "0.0.0-202505261229",
   "description": "This package contains JSON exports of the static GTFS data. It is updated once per day.",
   "type": "module",
-  "files": ["gtfs_json"],
+  "files": [
+    "gtfs_json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LiamMartens/mta-gtfs-static"
+  },
   "exports": {
     "./gtfs/*/*": "./gtfs_json/*/*.json"
   },
