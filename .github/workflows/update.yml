@@ -10,12 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - id: update-version
-        run: |
-          VERSION=0.0.0-$(date +%Y%m%d%H%M)
-          echo "version=0.0.0-$VERSION" >> $GITHUB_OUTPUT;
-          jq --arg version $VERSION '.version = $version' package.json > temp.json && mv temp.json package.json
-
       - uses: actions/checkout@v4
       - name: Use Node 20.x
         uses: actions/setup-node@v4
@@ -25,7 +19,11 @@ jobs:
         run: npm ci
       - name: Update data
         run: npm run data:update && npm run data:generate
-
+      - id: update-version
+        run: |
+          VERSION=0.0.0-$(date +%Y%m%d%H%M)
+          echo "version=0.0.0-$VERSION" >> $GITHUB_OUTPUT;
+          jq --arg version $VERSION '.version = $version' package.json > temp.json && mv temp.json package.json
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
