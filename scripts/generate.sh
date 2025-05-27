@@ -8,7 +8,7 @@ for f in $(find ./gtfs_raw -name "*.txt"); do
   # generate json file
   JSON_FILENAME="./gtfs_json/${FILE_DIRNAME}/${FILE_BASENAME%.txt}.json"
   mkdir -p $(dirname $JSON_FILENAME)
-  npm exec csv2json -- -d $f $JSON_FILENAME
+  npm exec csv2json -- $f $JSON_FILENAME
   node ./scripts/generate-dts-for-json.mjs $JSON_FILENAME "$JSON_FILENAME.d.ts"
 
   # generate js files
