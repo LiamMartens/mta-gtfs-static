@@ -19,6 +19,6 @@ unzip -d gtfs_raw/mnr gtfs_mnr.zip; rm gtfs_mnr.zip
 unzip -d gtfs_raw/bus_bx gtfs_bus_bx.zip; rm gtfs_bus_bx.zip
 unzip -d gtfs_raw/bus_bk gtfs_bus_bk.zip; rm gtfs_bus_bk.zip
 unzip -d gtfs_raw/bus_m gtfs_bus_m.zip; rm gtfs_bus_m.zip
-unzip -d gtfs_raw/gtfs_bus_qns gtfs_bus_qns.zip; rm gtfs_bus_qns.zip
-unzip -d gtfs_raw/gtfs_bus_si gtfs_bus_si.zip; rm gtfs_bus_si.zip
-unzip -d gtfs_raw/gtfs_bus_busco gtfs_bus_busco.zip; rm gtfs_bus_busco.zip
+unzip -d gtfs_raw/bus_qns gtfs_bus_qns.zip; rm gtfs_bus_qns.zip
+unzip -d gtfs_raw/bus_si gtfs_bus_si.zip; rm gtfs_bus_si.zip
+unzip -d gtfs_raw/bus_busco gtfs_bus_busco.zip; rm gtfs_bus_busco.zip
