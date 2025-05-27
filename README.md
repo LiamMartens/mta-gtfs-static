@@ -4,8 +4,9 @@ This package contains JSON exports of the static GTFS data. It is updated once p
 
 ## Usage
 
-You can directly import the RAW JSON files:
+You can either import either the JS or JSON files. Depending on your needs.
 
 ```js
-import bus_bk from "mta-gtfs-static/gtfs/subway/routes.json";
+import subway_routes from "mta-gtfs-static/gtfs_js/subway/routes.js";
+import subway_routes from "mta-gtfs-static/gtfs_json/subway/routes.js";
 ```
