@@ -326,7 +326,8 @@
   "scripts": {
     "data:update": "./scripts/update.sh",
     "data:generate": "./scripts/generate.sh",
-    "postinstall": "node ./scripts/decompress.mjs"
+    "prepack": "npx --package=cross-zip-cli cross-zip ./gtfs_js ./gtfs_js.zip; npx --package=cross-zip-cli cross-zip ./gtfs_json ./gtfs_json.zip",
+    "postinstall": "npx --package=cross-zip-cli cross-unzip ./gtfs_js.zip ./gtfs_js; npx --package=cross-zip-cli cross-unzip ./gtfs_json.zip ./gtfs_json; exit 0;"
   },
   "keywords": [
     "mta",
