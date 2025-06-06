@@ -4,8 +4,8 @@
   "description": "This package contains JSON exports of the static GTFS data. It is updated once per day.",
   "type": "module",
   "files": [
-    "gtfs_json",
-    "gtfs_js"
+    "gtfs_json.zip",
+    "gtfs_js.zip"
   ],
   "repository": {
     "type": "git",
@@ -317,13 +317,16 @@
     "./gtfs_js/bus_busco/stops": "./gtfs_js/bus_busco/stops.js"
   },
   "devDependencies": {
+    "cross-zip": "^4.0.1",
     "csv2json": "^2.0.2",
+    "fs-extra": "^11.3.0",
     "json-to-ts": "^2.1.0",
     "typescript": "^5.8.3"
   },
   "scripts": {
     "data:update": "./scripts/update.sh",
-    "data:generate": "./scripts/generate.sh"
+    "data:generate": "./scripts/generate.sh",
+    "postinstall": "node ./scripts/decompress.mjs"
   },
   "keywords": [
     "mta",
