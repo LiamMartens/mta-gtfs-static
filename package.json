@@ -1,6 +1,6 @@
 {
   "name": "mta-gtfs-static",
-  "version": "0.0.0-202506061440",
+  "version": "0.0.0-202602030201",
   "description": "This package contains JSON exports of the static GTFS data. It is updated once per day.",
   "type": "module",
   "files": [
@@ -314,7 +314,25 @@
     "./gtfs_json/bus_busco/stop_times": "./gtfs_json/bus_busco/stop_times.json",
     "./gtfs_js/bus_busco/stop_times": "./gtfs_js/bus_busco/stop_times.js",
     "./gtfs_json/bus_busco/stops": "./gtfs_json/bus_busco/stops.json",
-    "./gtfs_js/bus_busco/stops": "./gtfs_js/bus_busco/stops.js"
+    "./gtfs_js/bus_busco/stops": "./gtfs_js/bus_busco/stops.js",
+    "./gtfs_json/__MACOSX/._agency": "./gtfs_json/__MACOSX/._agency.json",
+    "./gtfs_js/__MACOSX/._agency": "./gtfs_js/__MACOSX/._agency.js",
+    "./gtfs_json/__MACOSX/._routes": "./gtfs_json/__MACOSX/._routes.json",
+    "./gtfs_js/__MACOSX/._routes": "./gtfs_js/__MACOSX/._routes.js",
+    "./gtfs_json/__MACOSX/._calendar_dates": "./gtfs_json/__MACOSX/._calendar_dates.json",
+    "./gtfs_js/__MACOSX/._calendar_dates": "./gtfs_js/__MACOSX/._calendar_dates.js",
+    "./gtfs_json/__MACOSX/._stop_times": "./gtfs_json/__MACOSX/._stop_times.json",
+    "./gtfs_js/__MACOSX/._stop_times": "./gtfs_js/__MACOSX/._stop_times.js",
+    "./gtfs_json/__MACOSX/._calendar": "./gtfs_json/__MACOSX/._calendar.json",
+    "./gtfs_js/__MACOSX/._calendar": "./gtfs_js/__MACOSX/._calendar.js",
+    "./gtfs_json/__MACOSX/._trips": "./gtfs_json/__MACOSX/._trips.json",
+    "./gtfs_js/__MACOSX/._trips": "./gtfs_js/__MACOSX/._trips.js",
+    "./gtfs_json/__MACOSX/._stops": "./gtfs_json/__MACOSX/._stops.json",
+    "./gtfs_js/__MACOSX/._stops": "./gtfs_js/__MACOSX/._stops.js",
+    "./gtfs_json/__MACOSX/._shapes": "./gtfs_json/__MACOSX/._shapes.json",
+    "./gtfs_js/__MACOSX/._shapes": "./gtfs_js/__MACOSX/._shapes.js",
+    "./gtfs_json/__MACOSX/._transfers": "./gtfs_json/__MACOSX/._transfers.json",
+    "./gtfs_js/__MACOSX/._transfers": "./gtfs_js/__MACOSX/._transfers.js"
   },
   "devDependencies": {
     "cross-zip": "^4.0.1",
