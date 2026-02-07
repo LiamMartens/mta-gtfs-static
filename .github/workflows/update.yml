@@ -32,6 +32,10 @@ jobs:
           VERSION=0.0.0-$(date +%Y%m%d%H%M)
           echo "version=$VERSION" >> $GITHUB_OUTPUT;
           jq --arg version $VERSION '.version = $version' package.json > temp.json && mv temp.json package.json
+      - name: Debug npm auth
+        run: |
+          npm config list
+          env | grep -i npm || true
       - run: npm publish
       - name: Create Release
         id: create_release
