@@ -29,7 +29,7 @@ jobs:
         run: npm run data:update && npm run data:generate
       - id: update-version
         run: |
-          VERSION=0.0.0-$(date +%Y%m%d%H%M)
+          VERSION=0.0.$(date +%Y%m%d%H%M)
           echo "version=$VERSION" >> $GITHUB_OUTPUT;
           jq --arg version $VERSION '.version = $version' package.json > temp.json && mv temp.json package.json
       - name: Debug npm auth
