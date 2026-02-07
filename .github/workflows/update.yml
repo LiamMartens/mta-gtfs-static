@@ -33,8 +33,6 @@ jobs:
           echo "version=$VERSION" >> $GITHUB_OUTPUT;
           jq --arg version $VERSION '.version = $version' package.json > temp.json && mv temp.json package.json
       - run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
