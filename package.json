@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/LiamMartens/mta-gtfs-static"
+    "url": "https://github.com/LiahMartens/mta-gtfs-static"
   },
   "exports": {
     "./gtfs/lirr/transfers.json": "./gtfs_json/lirr/transfers.json",
@@ -351,6 +351,6 @@
     "mta",
     "gtfs"
   ],
-  "author": "Liam Martens <hi@liammartens.com>",
+  "author": "Liah Martens <hi@liahmartens.com>",
   "license": "MIT"
 }
