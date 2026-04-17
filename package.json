@@ -1,6 +1,6 @@
 {
   "name": "mta-gtfs-static",
-  "version": "0.0.202604160232",
+  "version": "0.0.202604170228",
   "description": "This package contains JSON exports of the static GTFS data. It is updated once per day.",
   "type": "module",
   "files": [
