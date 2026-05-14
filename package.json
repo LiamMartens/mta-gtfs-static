@@ -1,6 +1,6 @@
 {
   "name": "mta-gtfs-static",
-  "version": "0.0.202605130254",
+  "version": "0.0.202605140255",
   "description": "This package contains JSON exports of the static GTFS data. It is updated once per day.",
   "type": "module",
   "files": [
@@ -332,7 +332,9 @@
     "./gtfs_json/__MACOSX/._shapes": "./gtfs_json/__MACOSX/._shapes.json",
     "./gtfs_js/__MACOSX/._shapes": "./gtfs_js/__MACOSX/._shapes.js",
     "./gtfs_json/__MACOSX/._transfers": "./gtfs_json/__MACOSX/._transfers.json",
-    "./gtfs_js/__MACOSX/._transfers": "./gtfs_js/__MACOSX/._transfers.js"
+    "./gtfs_js/__MACOSX/._transfers": "./gtfs_js/__MACOSX/._transfers.js",
+    "./gtfs_json/subway/feed_info": "./gtfs_json/subway/feed_info.json",
+    "./gtfs_js/subway/feed_info": "./gtfs_js/subway/feed_info.js"
   },
   "devDependencies": {
     "cross-zip": "^4.0.1",
